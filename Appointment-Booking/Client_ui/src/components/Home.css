@@ -1,0 +1,71 @@
+/* Home.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  direction: rtl;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #965a31, #575553);
+}
+
+.home-header {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.home-header .logo img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.main-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.home-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  background-color: #0a2f94;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5b6ef4;
+  transform: translateY(-2px);
+}
+
+.home-footer {
+  background-color: #001529;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.home-footer p {
+  margin: 0;
+}

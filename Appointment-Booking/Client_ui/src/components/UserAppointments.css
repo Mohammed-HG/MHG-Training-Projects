@@ -1,0 +1,37 @@
+/* UserAppointments.css */
+
+.user-appointments {
+  padding: 50px;
+  text-align: center;
+}
+
+.user-appointments table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-appointments th, .user-appointments td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.user-appointments th {
+  background-color: #001529;
+  color: white;
+}
+
+.new-appointment-button {
+  padding: 10px 20px;
+  background-color: #001529;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.new-appointment-button:hover {
+  background-color: #003d80;
+}

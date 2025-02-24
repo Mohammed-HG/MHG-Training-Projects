@@ -1,0 +1,35 @@
+/* AppointmentForm.css */
+
+.appointment-form {
+    padding: 50px;
+  }
+  
+  .appointment-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .appointment-form label {
+    margin: 10px 0 5px;
+  }
+  
+  .appointment-form input, .appointment-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+  }
+  
+  .appointment-form button {
+    padding: 10px 20px;
+    background-color: #001529;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .appointment-form button:hover {
+    background-color: #003d80;
+  }
+  
