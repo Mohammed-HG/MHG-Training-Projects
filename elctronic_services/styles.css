@@ -1,0 +1,293 @@
+/* تنسيق عام */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: right;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* الشريط العلوي */
+.top-bar {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 0;
+}
+
+.top-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-links li {
+    margin-left: 20px;
+}
+
+.top-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* القائمة الرئيسية */
+header {
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-menu li {
+    margin-left: 20px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* القسم الرئيسي (Hero Section) */
+.hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* قسم الخدمات */
+.services {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.card i {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+.card .btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* التذييل */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-media {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.button {
+    color: transparent;
+}
+
+.image-button {
+    background-color: transparent;
+    border: none; 
+    padding: 0;
+    cursor: pointer; 
+    display: inline-block; 
+    margin: 5px; 
+}
+
+.image-button img {
+    width: 40px; 
+    height: 40px; 
+    transition: transform 0.2s, opacity 0.2s; 
+}
+
+.image-button img:hover {
+    transform: scale(1.1); 
+}
+
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px; 
+}
+
+/* تخصيص الألوان لكل عمود */
+.bg-red {
+    background-color: rgb(228, 36, 36);
+    color: white; /* لون النص */
+    padding: 20px; /* إضافة حشو داخلي */
+}
+
+.bg-navy {
+    background-color: rgb(180, 169, 15);
+    color: white;
+    padding: 20px;
+}
+
+.bg-blue {
+    background-color: rgb(30, 113, 207);
+    color: white;
+    padding: 20px;
+}
+
+.bg-yellow {
+    background-color: yellow;
+    color: black; /* لون النص */
+    padding: 20px;
+}
+
+.bg-green {
+    background-color: rgb(58, 197, 58);
+    color: white;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1; /* يجعل الأعمدة متساوية في العرض */
+    display: flex;
+    align-items: center; /* توسيط المحتوى عموديًا */
+    justify-content: center; /* توسيط المحتوى أفقيًا */
+    padding: 20px;
+    cursor: pointer; /* تغيير شكل المؤشر إلى يد */
+    transition: background-color 0.3s; /* إضافة تأثير عند التحويم */
+}
+
+.col:hover {
+    opacity: 0.8; /* تخفيف اللون عند التحويم */
+}
+
+/* إخفاء محتوى الخدمات بشكل افتراضي */
+.service-content {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
