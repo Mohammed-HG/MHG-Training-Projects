@@ -16,8 +16,8 @@ body {
 
 /* الشريط العلوي */
 .top-bar {
-    background-color: #007BFF;
-    color: white;
+    background-color: #f8f8f8;
+    color: rgb(0, 0, 0);
     padding: 10px 0;
 }
 
@@ -34,7 +34,7 @@ body {
 }
 
 .top-links a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
@@ -87,79 +87,76 @@ header {
     cursor: pointer;
 }
 
-/* القسم الرئيسي (Hero Section) */
-.hero {
-    background-image: url('hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.hero .btn {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
 /* قسم الخدمات */
 .services {
     padding: 50px 0;
     background-color: white;
 }
 
-.services h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.service-cards {
+.row {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.card {
-    background-color: #f4f4f4;
+.col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 30%;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.card i {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #007BFF;
+.col:hover {
+    opacity: 0.8;
 }
 
-.card h3 {
-    margin-bottom: 10px;
-}
-
-.card p {
-    margin-bottom: 20px;
-}
-
-.card .btn {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
+.service-content {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+/* الخدمات الفرعية الأفقية */
+.sub-services-horizontal {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* الخدمات الفرعية العمودية */
+.sub-services-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sub-service {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sub-service:hover {
+    background-color: #e9e9e9;
+}
+
+.service-description {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
 }
 
 /* التذييل */
@@ -208,86 +205,57 @@ footer {
 
 .image-button {
     background-color: transparent;
-    border: none; 
+    border: none;
     padding: 0;
-    cursor: pointer; 
-    display: inline-block; 
-    margin: 5px; 
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
 }
 
 .image-button img {
-    width: 40px; 
-    height: 40px; 
-    transition: transform 0.2s, opacity 0.2s; 
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 .image-button img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
-
 
 .social-buttons {
     display: flex;
     justify-content: center;
-    align-items: center; 
-    gap: 10px; 
+    align-items: center;
+    gap: 10px;
 }
 
 /* تخصيص الألوان لكل عمود */
 .bg-red {
-    background-color: rgb(228, 36, 36);
-    color: white; /* لون النص */
-    padding: 20px; /* إضافة حشو داخلي */
+    background-color: rgb(228, 51, 51);
+    color: white;
+    padding: 20px;
 }
 
 .bg-navy {
-    background-color: rgb(180, 169, 15);
+    background-color: rgb(207, 194, 10);
     color: white;
     padding: 20px;
 }
 
 .bg-blue {
-    background-color: rgb(30, 113, 207);
+    background-color: rgb(51, 124, 207);
     color: white;
     padding: 20px;
 }
 
 .bg-yellow {
-    background-color: yellow;
-    color: black; /* لون النص */
+    background-color: rgb(218, 188, 20);
+    color: rgb(255, 255, 255);
     padding: 20px;
 }
 
 .bg-green {
-    background-color: rgb(58, 197, 58);
+    background-color: rgb(75, 196, 75);
     color: white;
     padding: 20px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.col {
-    flex: 1; /* يجعل الأعمدة متساوية في العرض */
-    display: flex;
-    align-items: center; /* توسيط المحتوى عموديًا */
-    justify-content: center; /* توسيط المحتوى أفقيًا */
-    padding: 20px;
-    cursor: pointer; /* تغيير شكل المؤشر إلى يد */
-    transition: background-color 0.3s; /* إضافة تأثير عند التحويم */
-}
-
-.col:hover {
-    opacity: 0.8; /* تخفيف اللون عند التحويم */
-}
-
-/* إخفاء محتوى الخدمات بشكل افتراضي */
-.service-content {
-    display: none;
-    padding: 20px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }

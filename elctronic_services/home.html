@@ -15,9 +15,9 @@
     <div class="top-bar">
         <div class="container">
             <ul class="top-links">
-                <li><a href="#">الدخول</a></li>
-                <li><a href="#">English</a></li>
-                <li><a href="#">تواصل معنا</a></li>
+                <li><a href="#"><i class="bi bi-person"></i></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
             </ul>
         </div>
     </div>
@@ -26,10 +26,10 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="Pic\AlhasaMunic.png" alt="شعار الأمانه" width="60" height="100">
+                <img src="Pic/AlhasaMunic.png" alt="شعار الأمانه" width="60" height="100">
             </div>
             <nav class="main-menu">
-                <ul>
+            <!--    <ul>
                     <li><a href="#">الرئيسية</a></li>
                     <li><a href="#">عن الموقع</a></li>
                     <li><a href="#">الخدمات</a></li>
@@ -41,44 +41,136 @@
                 <input type="text" placeholder="ابحث في الموقع...">
                 <button><i class="fas fa-search"></i></button>
             </div>
-        </div>
+        </div>-->
     </header>
 
     <!-- قسم الخدمات -->
     <section class="services">
         <div class="container text-center">
-            <div class="row row-cols-5">
+            <div class="row">
                 <!-- الأعمدة القابلة للنقر -->
-                <div class="col bg-red" onclick="showService('service1')">خدمة 1</div>
-                <div class="col bg-navy" onclick="showService('service2')">خدمة 2</div>
-                <div class="col bg-blue" onclick="showService('service3')">خدمة 3</div>
-                <div class="col bg-yellow" onclick="showService('service4')">خدمة 4</div>
-                <div class="col bg-green" onclick="showService('service5')">خدمة 5</div>
+                <div class="col bg-red" onclick="showService('service1')">بوابة الأمانة</div>
+                <div class="col bg-navy" onclick="showService('service2')">بوابة الأحساء</div>
+                <div class="col bg-blue" onclick="showService('service3')">الأفراد</div>
+                <div class="col bg-yellow" onclick="showService('service4')">الأعمال</div>
+                <div class="col bg-green" onclick="showService('service5')">بلدي</div>
             </div>
 
             <!-- محتوى الخدمات -->
             <div id="service1" class="service-content">
-                <h3>خدمة 1</h3>
-                <p>تفاصيل الخدمة 1 هنا...</p>
+                <!-- الخدمات الفرعية الأولى (دائمًا ظاهرة وأفقية) -->
+                <div class="sub-services-horizontal">
+                    <div class="sub-service" onclick="showSubServices('sub1-1')">حجز موعد</div>
+                    <div class="sub-service" onclick="showSubServices('sub1-2')">أمانة الاحساء</div>
+                    <div class="sub-service" onclick="showDescription('sub1-3')">خدمة الموارد البشرية</div>
+                </div>
+
+                <!-- الخدمات الفرعية الثانية (تظهر عند النقر وتكون عمودية) -->
+                <div id="sub1-1" class="sub-services-vertical hidden">
+                    <div class="sub-service" onclick="showDescription('desc1')">حجز موعد جديد</div>
+                </div>
+
+                <div id="sub1-2" class="sub-services-vertical hidden">
+                    <div class="sub-service" onclick="showDescription('desc4')">الأمين</div>
+                    <div class="sub-service" onclick="showDescription('desc5')">منصة المنقولات</div>
+                    <div class="sub-service" onclick="showDescription('desc6')">إدارات الأمانة</div>
+                </div>
+
+                <div id="sub1-3" class="sub-services-vertical hidden">
+                    <div class="sub-service" onclick="showDescription('desc7')">تقديم طلب تدريب التعاوني</div>
+                    <div class="sub-service" onclick="showDescription('desc8')">الاستعلام عن طلب التديب التعاوني</div>
+                    <div class="sub-service" onclick="showDescription('desc9')">إدارات الأمانة</div>
+                </div>
+
+                <!-- أوصاف الخدمات -->
+                <div id="desc1" class="service-description hidden">
+                    <h3>حجز موعد جديد</h3>
+                    <p>حجز موعد جديد</p>
+                </div>
+                <div id="desc2" class="service-description hidden">
+                    <h3>تعديل موعد</h3>
+                    <p>تفاصيل خدمة تعديل موعد هنا...</p>
+                </div>
+                <div id="desc3" class="service-description hidden">
+                    <h3>خدمة الموارد البشرية</h3>
+                    <p>تفاصيل خدمة الموارد البشرية هنا...</p>
+                </div>
+                <div id="desc4" class="service-description hidden">
+                    <h3>الأمين</h3>
+                    <p>صفحة خاصة بالأمين وطرق التواصل المباشر معه و مواعيد استقباله للمواطنين</p>
+                </div>
+                <div id="desc5" class="service-description hidden">
+                    <h3>منصة المنقولات</h3>
+                    <p>إعلانات خاصة لعرض المنقولات المرتجعة لعرضها على الجهات الحكومية الأخرى, وتمكين هذه الجهات من الإفصاح عن حاجتها ورغبتها في الاستفادة من هذه المنقولات.​​</p>
+                </div>
+                <div id="desc6" class="service-description hidden">
+                    <h3>إدارات الأمانة</h3>
+                    <p>تعرض هذه الصفحة جميع إدارات الأمانة و الأقسام التابعة لها و طرق التواصل معها</p>
+                </div>
+                <div id="desc7" class="service-description hidden"> 
+                    <h3>تقديم طلب تديب التعاوني</h3>
+                    <p>تتيح هذه الخدمة تقديم طلبات التدريب التعاوني للطلاب والطالبات</p>
+                </div>
+                <div id="desc8" class="service-description hidden"> 
+                    <h3>استعلام عن طلب تديب التعاوني</h3>
+                    <p>هذه الخدمة تتيح للطالب متابعة طلب التدريب التعاوني وطباعة الخطاب الموجه إلى الجهة التعليمية</p>
+                </div>
+                <div id="desc9" class="service-description hidden"> 
+                    <h3>تقديم طلب لاستقطاب الكفاءات</h3>
+                    <p>تتيح المنصة الفرصة لاستقطاب الكفاءات المتميزة من موظفي القطاع العام من خلال الخدمات الالكترونية المقدمة (نقل الخدمات على المسميات والمراتب المتاحة داخل المنصة - والتكليف (الندب) - والسلخ الوظيفي)</p>
+                </div>
             </div>
+
+            <!-- خدمات أخرى (مثال) -->
             <div id="service2" class="service-content">
-                <h3>خدمة 2</h3>
-                <p>تفاصيل الخدمة 2 هنا...</p>
-            </div>
-            <div id="service3" class="service-content">
-                <h3>خدمة 3</h3>
-                <p>تفاصيل الخدمة 3 هنا...</p>
-            </div>
-            <div id="service4" class="service-content">
-                <h3>خدمة 4</h3>
-                <p>تفاصيل الخدمة 4 هنا...</p>
-            </div>
-            <div id="service5" class="service-content">
-                <h3>خدمة 5</h3>
-                <p>تفاصيل الخدمة 5 هنا...</p>
+                <div class="sub-services-horizontal">
+                    <div class="sub-service" onclick="showDescription('desc7')">خدمة 2-1</div>
+                    <div class="sub-service" onclick="showDescription('desc8')">خدمة 2-2</div>
+                </div>
+                <div id="desc7" class="service-description hidden">
+                    <h3>خدمة 2-1</h3>
+                    <p>تفاصيل خدمة 2-1 هنا...</p>
+                </div>
+                <div id="desc8" class="service-description hidden">
+                    <h3>خدمة 2-2</h3>
+                    <p>تفاصيل خدمة 2-2 هنا...</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="container">
+            <div class="text-center">
+                <button class="image-button" onclick="window.location.href='https://www.alhasa.gov.sa/ar/Pages/default.aspx'">
+                    <img src="Pic/AlhasaMunic.png" alt="شعار أمانة الأحساء">
+                </button>
+                <div>بوابة الأمانه</div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <div>للتواصل مع الأمانة</div>
+                <div><i class="bi bi-telephone"></i> الهاتف : 0135825000</div>
+                <div><i class="bi bi-envelope"></i> البريد الإلكتروني : info@alhasa.gov.sa</div>
+                <div><i class="bi bi-life-preserver"></i> الطوارئ : 940</div>
+                <div class="social-buttons">
+                    <button class="image-button" onclick="window.location.href='https://www.instagram.com/alahsamun'">
+                        <img src="Pic/Instagram.png" alt="انستقرام الامانه">
+                    </button>
+                    <button class="image-button" onclick="window.location.href='https://snapchat.com/add/alhasa.events'">
+                        <img src="Pic/Snapchat.png" alt="سناب الامانه">
+                    </button>
+                    <button class="image-button" onclick="window.location.href='https://www.facebook.com/pages/Al-Hasa-Municipality/107067309377986'">
+                        <img src="Pic/facebook.png" alt="فيسبوك الامانه">
+                    </button>
+                    <button class="image-button" onclick="window.location.href='https://twitter.com/Alahsamun'">
+                        <img src="Pic/twitter.png" alt="تويتر الامانه">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
         // دالة لإظهار محتوى الخدمة
@@ -95,53 +187,42 @@
                 selectedService.style.display = 'block';
             }
         }
-    </script>
 
-    <!-- التذييل -->
-    <footer>
-        <Container dir="rtl">
-            <div>
-              <div><button class="image-button" onClick="window.location.href='https://www.alhasa.gov.sa/ar/Pages/default.aspx'">
-                        <img src="Pic/AlhasaMunic.png" alt="شعار أمانة الأحساء">
-                    </button>
-                </div>
-              <br/>
-              <div>بوابة الأمانه</div>
-            </div>
-                <hr/>
-              <Nav className="justify-content-center">
-                <div>
-                  <div>للتواصل مع الأمانة</div>
-                  <br/>
-                  <div><i class="bi bi-telephone"></i> الهاتف : 0135825000</div>
-                  <br />
-                  <div><i class="bi bi-envelope"></i> البريد الإليكتروني : info@alhasa.gov.sa</div>
-                  <br />
-                  <div><i class="bi bi-life-preserver"></i> الطوارئ : 940</div>
-                  <div class="social-buttons">
-                    <div>
-                        <button class="image-button" onClick="window.location.href='https://www.instagram.com/alahsamun'">
-                            <img src="Pic/Instagram.png" alt="انستقرام الامانه" />
-                        </button>
-                    </div>
-                    <div>
-                        <button class="image-button" onClick="window.location.href='https://snapchat.com/add/alhasa.events'">
-                            <img src="Pic/Snapchat.png" alt="سناب الامانه" />
-                        </button>
-                    </div>
-                    <div>
-                        <button class="image-button" onClick="window.location.href='https://www.facebook.com/pages/Al-Hasa-Municipality/107067309377986'">
-                            <img src="Pic/facebook.png" alt="فيسبوك الامانه" />
-                        </button>
-                    </div>
-                    <div>
-                        <button class="image-button" onClick="window.location.href='https://twitter.com/Alahsamun'">
-                            <img src="Pic/twitter.png" alt="تويتر الامانه" />
-                        </button>
-                    </div>
-              </Nav>
-            </Container>
-    </footer>
-</BottomBar>
+        // دالة لإظهار الخدمات الفرعية العمودية
+        function showSubServices(subId) {
+            // إخفاء جميع الخدمات الفرعية العمودية
+            const allSubServices = document.querySelectorAll('.sub-services-vertical');
+            allSubServices.forEach(sub => {
+                sub.classList.add('hidden');
+            });
+
+            // إظهار الخدمات الفرعية المحددة
+            const selectedSub = document.getElementById(subId);
+            if (selectedSub) {
+                selectedSub.classList.remove('hidden');
+            }
+
+            // إخفاء جميع الأوصاف
+            const allDescriptions = document.querySelectorAll('.service-description');
+            allDescriptions.forEach(desc => {
+                desc.classList.add('hidden');
+            });
+        }
+
+        // دالة لإظهار وصف الخدمة
+        function showDescription(descId) {
+            // إخفاء جميع الأوصاف
+            const allDescriptions = document.querySelectorAll('.service-description');
+            allDescriptions.forEach(desc => {
+                desc.classList.add('hidden');
+            });
+
+            // إظهار الوصف المحدد
+            const selectedDescription = document.getElementById(descId);
+            if (selectedDescription) {
+                selectedDescription.classList.remove('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
