@@ -3,48 +3,65 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import MessageModal from '../components/MessageModal';
 import styled from 'styled-components';
+import logo from '../components/Pic/AlhasaMunic.png';
 
 const Container = styled.div`
-  max-width: 500px;
-  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 110vh;
+  background: linear-gradient(120deg,rgb(143, 210, 255),rgb(9, 49, 95));
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+`;
+
+const Form = styled.form`
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 1s ease-in-out;
 `;
 
 const Title = styled.h2`
   text-align: center;
-  color: #333;
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Label = styled.label`
-  margin-bottom: 8px;
-  color: #666;
+  margin-bottom: 20px;
 `;
 
 const Input = styled.input`
-  padding: 10px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  &:focus {
+    border-color: #8e44ad;
+    outline: none;
+    box-shadow: 0 0 5px rgba(142, 68, 173, 0.5);
+  }
 `;
 
 const Button = styled.button`
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
+  width: 100%;
+  padding: 12px;
+  background:rgb(10, 47, 148);
+  color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
   &:hover {
-    background-color: #0056b3;
+    background: #5b6ef4;
+    transform: translateY(-2px);
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(93, 173, 226, 0.5);
   }
 `;
 
@@ -89,25 +106,36 @@ const Register = () => {
   };
 
   return (
-    <Container>
-      <Title>تسجيل</Title>
+    <Container dir='rtl'>
+     <img src={logo} alt="ًصورة الامانه" />
+        <br/>
       <Form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <Label className="form-label">اسم المستخدم</Label>
-          <Input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
-        </div>
-        <div className="mb-3">
-          <Label className="form-label">كلمة المرور</Label>
-          <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        </div>
-        <Button type="submit">تسجيل</Button>
-        <MessageModal
-          show={modalShow}
-          handleClose={() => setModalShow(false)}
-          title={modalTitle}
-          message={modalMessage}
+      <Title>تسجيل حساب جديد</Title>
+
+        <Input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="اسم المستخدم"
+          name="uname"
+          required
         />
+        <Input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="كلمة المرور"
+          name="pswd"
+          required
+        />
+        <Button type="submit">إنشاء حساب</Button>
       </Form>
+      <MessageModal
+        show={modalShow}
+        handleClose={() => setModalShow(false)}
+        title={modalTitle}
+        message={modalMessage}
+      />
     </Container>
   );
 };
