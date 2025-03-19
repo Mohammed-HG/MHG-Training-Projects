@@ -333,13 +333,13 @@ footer {
 
 /* تخصيص الألوان لكل عمود */
 .bg-red {
-    background-color: rgb(228, 51, 51);
+    background-color: rgba(199, 60, 60, 0.89);
     color: white;
     padding: 20px;
 }
 
 .bg-navy {
-    background-color: rgb(177, 138, 8);
+    background-color: rgb(179, 142, 21);
     color: white;
     padding: 20px;
 }
@@ -357,7 +357,7 @@ footer {
 }
 
 .bg-green {
-    background-color: rgb(75, 196, 75);
+    background-color: rgb(50, 180, 89);
     color: white;
     padding: 20px;
 }
