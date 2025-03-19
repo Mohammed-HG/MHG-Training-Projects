@@ -1,0 +1,377 @@
+/* التنسيق العام */
+body {
+    font-family: 'Simplified Arabic', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: right;
+}
+
+header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+}
+
+.top-bar {
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* يفصل بين القائمتين */
+    align-items: center; /* يمركز العناصر عمودياً */
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 0 10px;
+}
+
+/* المحتوى الرئيسي */
+main {
+    padding: 20px;
+}
+
+.news, .services {
+    margin-bottom: 40px;
+}
+
+.news h2, .services h2 {
+    color: #0078d7;
+    border-bottom: 2px solid #0078d7;
+    padding-bottom: 10px;
+}
+
+.news-container, .services-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.news-item, .service-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.news-item img, .service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* التذييل */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info, .social-media {
+    width: 45%;
+}
+
+.social-media img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+/* تنسيق عام */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: right;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* الشريط العلوي */
+.top-bar {
+    background-color: #f8f8f8;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+}
+
+.top-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top-links li {
+    margin-left: 20px;
+}
+
+.top-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+/* القائمة الرئيسية */
+header {
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-menu li {
+    margin-left: 20px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* قسم الخدمات */
+.services {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.col:hover {
+    opacity: 0.8;
+}
+
+.service-content {
+    display: none;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* الخدمات الفرعية الأفقية */
+.sub-services-horizontal {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* الخدمات الفرعية العمودية */
+.sub-services-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    direction: rtl;
+}
+
+.sub-service {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    direction: rtl;
+}
+
+.sub-service:hover {
+    background-color: #e9e9e9;
+    direction: rtl;
+}
+
+.service-description {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    direction: rtl;
+}
+
+.hidden {
+    display: none;
+}
+
+/* التذييل */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-media {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.button {
+    color: transparent;
+}
+
+.image-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+}
+
+.image-button img {
+    width: 110px;
+    height: 125px;
+}
+
+.image-button1 img {
+    width: 600px;
+    height: 100px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* تخصيص الألوان لكل عمود */
+.bg-red {
+    background-color: rgb(228, 51, 51);
+    color: white;
+    padding: 20px;
+}
+
+.bg-navy {
+    background-color: rgb(177, 138, 8);
+    color: white;
+    padding: 20px;
+}
+
+.bg-blue {
+    background-color: rgb(51, 124, 207);
+    color: white;
+    padding: 20px;
+}
+
+.bg-yellow {
+    background-color: rgb(218, 182, 20);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.bg-green {
+    background-color: rgb(75, 196, 75);
+    color: white;
+    padding: 20px;
+}
+
+.back-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px;
+}
+.back-button:hover {
+    background-color: #0056b3;
+}
