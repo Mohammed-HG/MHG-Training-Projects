@@ -12,22 +12,6 @@
 
 </head>
 <body>
-
-    <div id="date-container"></div>
-
-    <script>
-        const dateContainer = document.getElementById('date-container');
-        const today = new Date();
-        const options = { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-        };
-        const formattedDate = today.toLocaleDateString('ar-EG', options);
-        dateContainer.textContent = formattedDate;
-    </script>
-
     <!-- الشريط العلوي -->
     <header>
           <!-- قسم الأخبار -->
@@ -48,12 +32,29 @@
         <div class="top-bar">
             <nav>
                 <ul class="left">
-                    <li><a href="#"><i class="bi bi-envelope"></i></a></li>
-                    <li><a href="#"><i class="bi bi-diagram-3"></i></a></li>
+                    <li><i class="bi bi-calendar">                        
+                        <div id="date-container"></div>
+
+                        <script>
+                            const dateContainer = document.getElementById('date-container');
+                            const today = new Date();
+                            const options = { 
+                                weekday: 'long', 
+                                year: 'numeric', 
+                                month: 'long', 
+                                day: 'numeric' 
+                            };
+                            const formattedDate = today.toLocaleDateString('ar-EG', options);
+                            dateContainer.textContent = formattedDate;
+                        </script></i></li>
+                    <li><i class="bi bi-envelope"></i></li>
+                    <li><i class="bi bi-diagram-3"></i></li>
+                    <li><i class="bi bi-phone"></i></li>
                 </ul>
                 <ul class="right">
-                    <li><a href="#"><i class="bi bi-phone"></i></a></li>
-                    <li><a href="#"><i class="bi bi-eye-slash"></i></a></li>
+                    <li><i class="bi bi-eye-slash"></i></li>
+                    <li><i class="bi bi-person-fill"></i></li>
+                    <li><i class="bi bi-search"></i></li>
                 </ul>
             </nav>
         </div>
